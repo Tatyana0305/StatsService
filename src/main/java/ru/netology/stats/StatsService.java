@@ -1,4 +1,4 @@
-package ru.netology.sqr;
+package ru.netology.stats;
 
 public class StatsService {
 
@@ -50,8 +50,7 @@ public class StatsService {
     public int numberMonthsUnderAverage(long[] sales) {
 
         int month = 0;
-        StatsService service = new StatsService();
-        long averageSales = service.averageSales(sales);
+        long averageSales = averageSales(sales);
         int countMonths = 0;
         for (long sale : sales) {
             month = month + 1;
@@ -65,8 +64,7 @@ public class StatsService {
 
     public int numberMonthsOverAverage(long[] sales) {
         int month = 0;
-        StatsService service = new StatsService();
-        long averageSales = service.averageSales(sales);
+        long averageSales = averageSales(sales);
         int countMonths = 0;
         for (long sale : sales) {
             month = month + 1;
